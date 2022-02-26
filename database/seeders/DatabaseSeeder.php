@@ -13,6 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // User::factory(10)->create();
+        $this->call(SetorTableSeeder::class);
+        $this->call(FuncionarioTableSeeder::class);
+        $this->call(TelefoneTableSeeder::class);
     }
 }

@@ -20,7 +20,7 @@ class CreateTelefonesTable extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('funcionario_id')->references('id')->on('funcionarios');
+            $table->foreign('funcionario_id')->references('id')->on('funcionarios')->onDelete('cascade');
         });
     }
 
