@@ -19,11 +19,9 @@ class CreateFuncionariosTable extends Migration
             $table->string('nome');
             $table->string('carteira_trabalho');
             $table->integer('setor_id')->unsigned();
-            $table->integer('telefone_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();
             
-            $table->foreign('telefone_id')->references('id')->on('telefones');
             $table->foreign('setor_id')->references('id')->on('setores');
         });
     }

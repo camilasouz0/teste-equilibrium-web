@@ -14,10 +14,13 @@ class CreateTelefonesTable extends Migration
     public function up()
     {
         Schema::create('telefones', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->integer('funcionario_id')->unsigned();
             $table->string('telefone');
             $table->timestamps();
             $table->softDeletes();
+
+            $table->foreign('funcionario_id')->references('id')->on('funcionarios');
         });
     }
 

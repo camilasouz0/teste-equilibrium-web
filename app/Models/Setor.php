@@ -11,6 +11,8 @@ class Setor extends Model
     use HasFactory;
     use SoftDeletes;
 
+    protected $table = 'setores';
+
     protected $fillable = [
         'nome',
     ];
