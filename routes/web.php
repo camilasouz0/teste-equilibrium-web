@@ -24,4 +24,6 @@ Route::get('/', [IndexController::class, 'index'])->name('site.index');
 
 Route::get('/funcionarios', [FuncionariosController::class, 'index'])->name('site.pages.funcionarios');
 Route::post('/funcionarios/post', [FuncionariosController::class, 'store'])->name('site.pages.funcionarios.post');
+Route::post('/funcionarios/{id?}', [FuncionariosController::class, 'update'])->name('site.pages.funcionarios.update');
+
 

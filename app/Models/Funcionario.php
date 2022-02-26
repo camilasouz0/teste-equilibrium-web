@@ -18,4 +18,12 @@ class Funcionario extends Model
         'setor_id',
         'telefone_id',
     ];
+
+    public function telefones(){
+        return $this->hasMany(Telefone::class, 'funcionario_id', 'id');
+    }
+
+    public function setor(){
+        return $this->belongsTo(Setor::class, 'setor_id', 'id');
+    }
 }

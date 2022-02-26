@@ -39,4 +39,9 @@ class FuncionariosController extends Controller
             return redirect()->back()->with('errors', 'Erro ao cadastrar funcionario!');
         }
     }
+
+    public function update(Request $request, $id)
+    {
+        $input = $request->all();
+    }
 }

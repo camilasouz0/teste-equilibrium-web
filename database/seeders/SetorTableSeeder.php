@@ -16,13 +16,16 @@ class SetorTableSeeder extends Seeder
     {
         $setores_seeder = [
             [
-                'nome' => 'Setor 1',
+                'nome' => 'Vendas',
             ],
             [
-                'nome' => 'Setor 2',
+                'nome' => 'Escritório',
             ],
             [
-                'nome' => 'Setor 3',
+                'nome' => 'Estoque',
+            ],
+            [
+                'nome' => 'Administrativo',
             ],
         ];
 
