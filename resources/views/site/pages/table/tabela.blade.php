@@ -34,12 +34,12 @@
                             </ul>
                         </td>
                         <td data-th="Opções">
-                            <a href="" class="btn btn-info text-white">
+                            <a href="{{ route('site.pages.funcionarios', $funcionario->id) }}" class="btn btn-info text-white">
                                 <i class="far fa-edit me-2"></i>
                                 <span class="d-none d-md-block">Editar</span>
                                 </a>
                 
-                                <a data-url="" href="#" class="btn btn-outline-danger atencao">
+                                <a data-url="{{ route('site.pages.funcionarios.destroy', $funcionario->id) }}" href="javascript:void(0)" class="btn btn-outline-danger atencao">
                                 <i class="fas fa-ban me-2"></i>
                                 <span class="d-none d-md-block">Excluir</span>
                             </a>
@@ -49,16 +49,5 @@
                 @endif
             </table>
         </div>
-        {{-- <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-            <table class="rwd-table">
-                @if (count($funcionarios))
-                    @foreach($funcionarios as $funcionario)
-                    <tr>
-                        
-                    </tr>
-                    @endforeach
-                @endif
-            </table>
-        </div> --}}
     </div>
 </div>

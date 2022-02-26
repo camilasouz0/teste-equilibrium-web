@@ -22,8 +22,10 @@ Route::get('/laravel', function () {
 
 Route::get('/', [IndexController::class, 'index'])->name('site.index');
 
-Route::get('/funcionarios', [FuncionariosController::class, 'index'])->name('site.pages.funcionarios');
+Route::get('/funcionarios/{id?}', [FuncionariosController::class, 'index'])->name('site.pages.funcionarios');
 Route::post('/funcionarios/post', [FuncionariosController::class, 'store'])->name('site.pages.funcionarios.post');
-Route::post('/funcionarios/{id?}', [FuncionariosController::class, 'update'])->name('site.pages.funcionarios.update');
+Route::post('/funcionarios/update/{id?}', [FuncionariosController::class, 'update'])->name('site.pages.funcionarios.update');
+Route::get('/funcionarios/destroy/{id?}', [FuncionariosController::class, 'destroy'])->name('site.pages.funcionarios.destroy');
+
 
 

@@ -19,16 +19,42 @@ $('.add').click(function() {
     var div = $(".divclone")
                     .first()
                     .clone();
-                    $(".divclone").last().after(div);
-                    $('.telefone').mask(maskBehavior, options);
+        div.find('input').val('');
+        $(".divclone").last().after(div);
+        $('.telefone').mask(maskBehavior, options);
 });
 
 $('.remove').click(function() {
-    if($(".divclone").length > 1)
-    {
-        console.log('apertei');
+    if($(".divclone").length > 1){
         $(".divclone").last().remove();
     }
+});
+</script>
+
+<script>
+$('.atencao').on('click', function (event) {
+    event.preventDefault();
+    var url = $(this).attr('data-url');
+    swal({
+        title: "Atenção!",
+        text: "Deseja continuar com esta operação?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+        buttons: {
+            cancel: "Cancelar",
+            catch: {
+                text: "Confirmar",
+                value: "excluir",
+            },
+            defeat: false,
+            }
+    }).then((value) => {
+        if (value == "excluir") {
+            window.location.href = url
+        }
+    })
+
 });
 </script>
 
