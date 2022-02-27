@@ -40,7 +40,8 @@ class FuncionariosController extends Controller
             }
             return redirect()->route('site.index')->with('success', 'Funcionário cadastrado com sucesso!');
         } catch (\Throwable $th) {
-            return redirect()->back()->with('errors', 'Erro ao cadastrar funcionario!');
+            return redirect()->back()->with('errors', 'Erro ao cadastrar funcionario!')
+            ->withErrors('Erro ao cadastrar funcionario!');
         }
     }
 
@@ -67,7 +68,8 @@ class FuncionariosController extends Controller
             }
             return redirect()->route('site.index')->with('success', 'Funcionário atualizado com sucesso!');
         } catch (\Throwable $th) {
-            return redirect()->back()->with('errors', 'Erro ao atualizar funcionario!');
+            return redirect()->back()->with('errors', 'Erro ao atualizar funcionario!')
+            ->withErrors('Erro ao atualizar funcionario!');
         }
     }
 

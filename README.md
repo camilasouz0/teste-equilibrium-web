@@ -37,6 +37,8 @@ php artisan key:generate
 ```http
   php artisan serve
 ```
+
+### Sendo este comando opcional
 ```http
   npm run watch
 ```
