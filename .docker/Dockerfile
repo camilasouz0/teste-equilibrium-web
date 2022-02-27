@@ -35,8 +35,6 @@ RUN chown -R www-data:www-data /var/www/html \
 
 COPY ./package*.json ./
 
-RUN npm install
-
 ARG user
 ARG uid
 

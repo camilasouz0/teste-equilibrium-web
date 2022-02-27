@@ -37,12 +37,23 @@ php artisan key:generate
 ```http
   php artisan serve
 ```
-
 ### Sendo este comando opcional
 ```http
   npm run watch
 ```
-
+### Instruções para rodar o projeto no docker
+```http
+    docker-compose up --build
+```  
+```http
+    args:
+        user: nomeusuario #utilizar o mesmo usuário do WSL
+        uid: 1000
+```
+```http
+environment:
+      MYSQL_DATABASE: 'nomedobanco'
+```
 ### Este projeto trabalha com componentes
 ```http
     @component('components.projeto.index', [
