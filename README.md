@@ -32,7 +32,12 @@ DB_PASSWORD=
 ```http
 php artisan key:generate
 ```
-
+```http
+php artisan migrate
+```
+```http
+php artisan db:seed
+```
 ### Rodando o projeto
 ```http
   php artisan serve
